@@ -1,6 +1,6 @@
 //
 //  CGPointExtensions.swift
-//  ClerChain
+//  CGExtensions
 //
 //  Created by TJ Sartain on 5/11/20.
 //  Copyright © 2020 Penske Logistics. All rights reserved.

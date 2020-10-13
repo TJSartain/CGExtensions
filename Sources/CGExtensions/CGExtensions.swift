@@ -1,6 +1,6 @@
 //
 //  CGExtensions.swift
-//  ClearChain2
+//  CGExtensions
 //
 //  Created by TJ Sartain on 7/8/20.
 //  Copyright © 2020 Penske Logistics. All rights reserved.
@@ -79,7 +79,3 @@ extension CGFloat
         equals(other, tolerance)
     }
 }
-
-
-
-

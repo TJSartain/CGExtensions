@@ -1,6 +1,6 @@
 //
 //  CGVectorExtensions.swift
-//  TJS Graphics
+//  CGExtensions
 //
 //  Created by TJ Sartain on 2/7/20.
 //  Copyright © 2020 iTrinity, Inc. All rights reserved.

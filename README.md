@@ -2,6 +2,19 @@
 
 A collection of helpful functions and additions to various CoreGraphics structs.
 
+
+CGFloat
+
+    public var radians: CGFloat 
+    public var degrees: CGFloat 
+
+    public static let tolerance: CGFloat = 1e-12
+
+    public func equals(_ x: CGFloat, _ tol: CGFloat? = .tolerance) -> Bool
+    public func between(_ x: CGFloat, _ y: CGFloat) -> Bool
+    public func fuzzyEqual(to other: CGFloat, _ tolerance: CGFloat) -> Bool
+
+
 CGPoint
 
     public init(_ x: CGFloat, _ y: CGFloat)
@@ -40,13 +53,28 @@ CGRect
     public func draw(fill: UIColor?, stroke: UIColor?, width: CGFloat?)
 
 
-CGFloat
+CGVector
 
-    public var radians: CGFloat 
-    public var degrees: CGFloat 
+    public init(_ dx: CGFloat, _ dy: CGFloat)
+    public init(from pt1: CGPoint, to pt2: CGPoint)
+    public init(magnitude m: CGFloat, angle a: CGFloat)
 
-    public static let tolerance: CGFloat = 1e-12
+    public var magnitude: CGFloat
+    public var magnitudeSquared: CGFloat
+    public var manhattanMagnitude: CGFloat
+    public var normalized: CGVector
 
-    public func equals(_ x: CGFloat, _ tol: CGFloat? = .tolerance) -> Bool
-    public func between(_ x: CGFloat, _ y: CGFloat) -> Bool
-    public func fuzzyEqual(to other: CGFloat, _ tolerance: CGFloat) -> Bool
+    public static func + (left: CGVector, right: CGVector) -> CGVector
+    public static func - (left: CGVector, right: CGVector) -> CGVector
+    public static func * (left: CGFloat, right: CGVector) -> CGVector
+    public static func * (left: CGVector, right: CGFloat) -> CGVector
+    public static func / (left: CGVector, right: CGFloat) -> CGVector
+    public static prefix func - (vector: CGVector) -> CGVector
+    public static func += (left: inout CGVector, right: CGVector)
+    public static func -= (left: inout CGVector, right: CGVector)
+    public static func *= (left: inout CGVector, right: CGFloat)
+    public static func /= (left: inout CGVector, right: CGFloat)
+
+    public mutating func normalize()
+    public func dot(_ other: CGVector) -> CGFloat
+    public func cross(_ other: CGVector) -> CGFloat
