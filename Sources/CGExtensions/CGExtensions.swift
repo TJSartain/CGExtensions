@@ -78,4 +78,24 @@ extension CGFloat
     {
         equals(other, tolerance)
     }
+    
+    public func power(_ a: CGFloat, _ b: CGFloat) -> CGFloat
+    {
+        return a * pow(self, b)
+    }
+    
+    public func power(_ a: (CGFloat, CGFloat)) -> CGFloat
+    {
+        return a.0 * pow(self, a.1)
+    }
+    
+    public func exponential(_ a: CGFloat, _ b: CGFloat) -> CGFloat
+    {
+        return a * pow(CGFloat(M_E), b * self)
+    }
+    
+    public func exponential(_ a: (CGFloat, CGFloat)) -> CGFloat
+    {
+        return a.0 * pow(CGFloat(M_E), a.1 * self)
+    }
 }

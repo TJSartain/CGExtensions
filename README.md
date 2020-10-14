@@ -13,6 +13,10 @@ CGFloat
     public func equals(_ x: CGFloat, _ tol: CGFloat? = .tolerance) -> Bool
     public func between(_ x: CGFloat, _ y: CGFloat) -> Bool
     public func fuzzyEqual(to other: CGFloat, _ tolerance: CGFloat) -> Bool
+    public func power(_ a: CGFloat, _ b: CGFloat) -> CGFloat
+    public func power(_ a: (CGFloat, CGFloat)) -> CGFloat
+    public func exponential(_ a: CGFloat, _ b: CGFloat) -> CGFloat
+    public func exponential(_ a: (CGFloat, CGFloat)) -> CGFloat
 
 
 CGPoint
